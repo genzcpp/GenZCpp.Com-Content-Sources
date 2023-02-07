@@ -2,13 +2,18 @@
 
 ## Build Instructions
 ### Prerequisites
-- Requires `boost 1.80.0`. For MacOS, just `brew install boost`
-- Requires `cmake 3.20.0`. For MacOS, just `brew install cmake`
+- [cmake build only] Requires `boost 1.80.0`. For MacOS, just `brew install boost`
+- [cmake build only] Requires `cmake 3.20.0`. For MacOS, just `brew install cmake`
+- Requires `GNC C++` compiler `g++-12 (Homebrew GCC 12.2.0) 12.2.0`. 
+    - For MacOS, just `brew install gcc` 
+    - then add `alias g++12="/opt/homebrew/Cellar/gcc/12.2.0/bin/g++-12` to `~/.zprofile`.
 
-### build
+### gcc build
+`./gcc_build.sh ARG1.cpp` This script compiles and run the executable for `ARG1.cpp`
+
+
+### cmake build (boost required)
 `./cmake_build.sh ARG1` This script compiles and run the executable `ARG1.cpp`
-
-All examples are created so that relevant pieces are in a single .cpp file.
 
 > For example, to build `auto_type_deduction.cpp`, just do
 
